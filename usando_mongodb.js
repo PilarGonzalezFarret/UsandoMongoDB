@@ -1,3 +1,19 @@
+//Cree una base de datos llamada 'my_first_db'.
+use my_first_db
+
+//Crear colección de estudiantes.
+db.createCollection('students')
+
+//Crea 5 estudiantes con la información adecuada.
+db.students.insertMany([
+    { name: "Esteban", home_state: "Florida", lucky_number: 2, birthday: { month: 1, day: 5, year: 1995 } },
+    { name: "Julieta", home_state: "New York", lucky_number: 13, birthday: { month: 7, day: 27, year: 1999 } },
+    { name: "Estefanía", home_state: "Washington", lucky_number: 7, birthday: { month: 11, day: 15, year: 1999 } },
+    { name: "Pedro", home_state: "California", lucky_number: 4, birthday: { month: 6, day: 23, year: 1996 } },
+    { name: "Isabel", home_state: "Texas", lucky_number: 8, birthday: { month: 12, day: 15, year: 2000 } }
+  ])
+  
+
 //Consigue todos los estudiantes
 db.student.find().pretty()
 
